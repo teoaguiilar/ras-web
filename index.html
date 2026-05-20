@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>RAS · Reactor de Acción Social — Molina de Segura</title>
+  <meta name="description" content="RAS, Reactor de Acción Social. Partido político de Molina de Segura. No venimos a prometer, venimos a trabajar." />
+  <meta property="og:title" content="RAS · Reactor de Acción Social" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Partido político de Molina de Segura. No venimos a prometer, venimos a trabajar." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER / NAVBAR
+       ============================================================ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="logo" aria-label="RAS — Reactor de Acción Social">
+        <span class="logo-mark">RAS</span>
+        <span class="logo-sub">Reactor<br/>de Acción Social</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#manifiesto">Manifiesto</a>
+        <a href="#compromisos">Compromisos</a>
+        <a href="#transparencia">Transparencia</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a href="#contacto" class="nav-cta">Únete</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- mobile drawer -->
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#manifiesto">Manifiesto</a>
+    <a href="#compromisos">Compromisos</a>
+    <a href="#transparencia">Transparencia</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#contacto" class="nav-cta nav-cta--mobile">Únete</a>
+  </aside>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="manifiesto">
+    <div class="hero-mark">
+      <div class="hero-mark-inner">
+        <span class="hero-mark-text">RAS</span>
+        <span class="hero-mark-sub">Reactor de Acción Social · Molina de Segura</span>
+      </div>
+    </div>
+
+    <div class="hero-slogan">
+      <p class="hero-slogan-text">No venimos a prometer,<br/>venimos a trabajar.</p>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-col hero-col--left">
+        <p class="hero-eyebrow">— Partido político municipal · fundado 2024</p>
+        <p class="hero-lead">
+          RAS nace en Molina de Segura desde la calle, desde los barrios y desde el trabajo
+          diario. No somos profesionales de la política: somos vecinos, trabajadores y trabajadoras
+          que hemos decidido organizarnos para gobernar nuestra ciudad con honestidad,
+          rigor y verdadera vocación de servicio público.
+        </p>
+        <p class="hero-lead">
+          Frente a la política del titular y el espectáculo, defendemos una política de
+          calle, de gestión y de cuentas claras. Una política que se mide por lo que hace,
+          no por lo que dice.
+        </p>
+      </div>
+
+      <div class="hero-col hero-col--right">
+        <div class="hero-stat">
+          <span class="hero-stat-num">08</span>
+          <span class="hero-stat-lbl">Compromisos firmes</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">00</span>
+          <span class="hero-stat-lbl">Cargos liberados</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">100%</span>
+          <span class="hero-stat-lbl">Cuentas públicas</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">2027</span>
+          <span class="hero-stat-lbl">Próximas municipales</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       COMPROMISOS
+       ============================================================ -->
+  <section class="compromisos" id="compromisos">
+    <div class="compromisos-head">
+      <div class="compromisos-head-left">
+        <p class="section-eyebrow">— Programa político</p>
+        <h2 class="section-title">Ocho compromisos<br/>firmados con la ciudad.</h2>
+      </div>
+      <div class="compromisos-head-right">
+        <p class="section-note">
+          Cada uno de estos compromisos está firmado por la dirección del partido y publicado
+          íntegramente. Si gobernamos y no los cumplimos, dimitimos. Así de simple.
+        </p>
+        <div class="program-search">
+          <label for="program-search-input" class="program-search-label">Buscar en programa</label>
+          <input
+            type="search"
+            id="program-search-input"
+            class="program-search-input"
+            data-program-search
+            placeholder="Escribe una palabra: vivienda, agua, juventud…"
+            aria-label="Buscar en el programa político"
+          />
+        </div>
+      </div>
+    </div>
+
+    <ol class="compromisos-list" data-program-list>
+      <li class="compromiso" data-program-item>
+        <span class="compromiso-num">01</span>
+        <div class="compromiso-body">
+          <h3 class="compromiso-title">Vivienda digna y alquileres asequibles</h3>
+          <p class="compromiso-text">
+            Censo público de vivienda vacía municipal. Bolsa de alquiler asequible
+            con incentivos fiscales a quien alquile a precio tasado. Stop a la
+            especulación turística en el casco histórico.
+          </p>
+        </div>
+      </li>
+
+      <li class="compromiso" data-program-item>
+        <span class="compromiso-num">02</span>
+        <div class="compromiso-body">
+          <h3 class="compromiso-title">Servicios públicos de calidad</h3>
+          <p class="compromiso-text">
+            Refuerzo de los servicios sociales municipales. Internalización progresiva
+            de la limpieza viaria y el mantenimiento. Auditoría pública de todas las
+            contratas heredadas.
+          </p>
+        </div>
+      </li>
+
+      <li class="compromiso" data-program-item>
+        <span class="compromiso-num">03</span>
+        <div class="compromiso-body">
+          <h3 class="compromiso-title">Empleo local y dignidad laboral</h3>
+          <p class="compromiso-text">
+            Cláusulas sociales en toda contratación pública del Ayuntamiento.
+            Apoyo real al pequeño comercio y a la agricultura de la Vega. Salario
+            mínimo municipal de referencia para contratas.
+          </p>
+        </div>
+      </li>
+
+      <li class="compromiso" data-program-item>
+        <span class="compromiso-num">04</span>
+        <div class="compromiso-body">
+          <h3 class="compromiso-title">Río Segura, agua y medio ambiente</h3>
+          <p class="compromiso-text">
+            Plan integral de recuperación de las riberas del Segura. Auditoría del
+            ciclo del agua. Ampliación de zonas verdes urbanas y arbolado adaptado
+            al clima mediterráneo.
+          </p>
+        </div>
+      </li>
+
+      <li class="compromiso" data-program-item>
+        <span class="compromiso-num">05</span>
+        <div class="compromiso-body">
+          <h3 class="compromiso-title">Cultura, juventud y memoria</h3>
+          <p class="compromiso-text">
+            Espacios autogestionados para asociaciones y jóvenes. Bono cultural
+            municipal. Recuperación del patrimonio histórico y de la memoria democrática
+            del municipio.
+          </p>
+        </div>
+      </li>
+
+      <li class="compromiso" data-program-item>
+        <span class="compromiso-num">06</span>
+        <div class="compromiso-body">
+          <h3 class="compromiso-title">Transparencia radical y rendición de cuentas</h3>
+          <p class="compromiso-text">
+            Publicación íntegra de agendas de concejalías. Portal abierto del Pleno con
+            todas las votaciones. Sueldos, dietas y contratos publicados en tiempo
+            real.
+          </p>
+        </div>
+      </li>
+
+      <li class="compromiso" data-program-item>
+        <span class="compromiso-num">07</span>
+        <div class="compromiso-body">
+          <h3 class="compromiso-title">Salud, mayores y dependencia</h3>
+          <p class="compromiso-text">
+            Refuerzo del transporte sanitario municipal. Plan local contra la soledad
+            no deseada. Apoyo a centros de día y a personas cuidadoras del municipio.
+          </p>
+        </div>
+      </li>
+
+      <li class="compromiso" data-program-item>
+        <span class="compromiso-num">08</span>
+        <div class="compromiso-body">
+          <h3 class="compromiso-title">Educación pública y conciliación</h3>
+          <p class="compromiso-text">
+            Mantenimiento real de los colegios públicos del municipio. Escuelas
+            infantiles municipales asequibles. Patios abiertos los fines de semana
+            como espacios de barrio.
+          </p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="compromisos-empty" data-program-empty hidden>
+      No hay compromisos que coincidan con esa búsqueda.
+    </p>
+  </section>
+
+  <!-- ============================================================
+       TRANSPARENCIA
+       ============================================================ -->
+  <section class="transparencia" id="transparencia">
+    <div class="transparencia-head">
+      <p class="section-eyebrow">— Ficha pública del partido</p>
+      <h2 class="section-title">Quiénes somos.<br/>Cuánto cobramos.<br/>Qué hacemos con cada euro.</h2>
+    </div>
+
+    <div class="transparencia-doc">
+      <div class="transparencia-col">
+        <dl class="ficha">
+          <div class="ficha-row">
+            <dt>Denominación</dt>
+            <dd>Reactor de Acción Social (RAS)</dd>
+          </div>
+          <div class="ficha-row">
+            <dt>Ámbito</dt>
+            <dd>Municipal — Molina de Segura (Región de Murcia)</dd>
+          </div>
+          <div class="ficha-row">
+            <dt>Fundación</dt>
+            <dd>14 de marzo de 2024</dd>
+          </div>
+          <div class="ficha-row">
+            <dt>Nº de afiliación</dt>
+            <dd>312 personas afiliadas · cuota mín. 5 €/mes</dd>
+          </div>
+          <div class="ficha-row">
+            <dt>Estructura</dt>
+            <dd>Asamblea soberana · Coordinadora rotatoria de 7 miembros</dd>
+          </div>
+          <div class="ficha-row">
+            <dt>Limitación de mandatos</dt>
+            <dd>Máximo dos mandatos consecutivos en cualquier cargo público</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="transparencia-col">
+        <dl class="ficha">
+          <div class="ficha-row">
+            <dt>Financiación 2025</dt>
+            <dd>Cuotas: 18.720 € · Microdonaciones: 4.310 €</dd>
+          </div>
+          <div class="ficha-row">
+            <dt>Subvenciones públicas</dt>
+            <dd>0,00 € — No las aceptamos</dd>
+          </div>
+          <div class="ficha-row">
+            <dt>Bancos</dt>
+            <dd>Cuenta única en banca ética (Triodos)</dd>
+          </div>
+          <div class="ficha-row">
+            <dt>Auditoría</dt>
+            <dd>Cuentas auditadas anualmente y publicadas en abierto</dd>
+          </div>
+          <div class="ficha-row">
+            <dt>Código ético</dt>
+            <dd>Firmado por toda persona afiliada · disponible íntegro</dd>
+          </div>
+          <div class="ficha-row">
+            <dt>Sede</dt>
+            <dd>C/ Mayor, 18 — Molina de Segura · Abierta L–V, 18–21 h</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <p class="transparencia-stamp">
+      Documento público · revisado 01.05.2026 · firmado por la coordinadora rotatoria
+    </p>
+  </section>
+
+  <!-- ============================================================
+       CONTACTO
+       ============================================================ -->
+  <section class="contacto" id="contacto">
+    <div class="contacto-head">
+      <p class="section-eyebrow">— Súmate</p>
+      <h2 class="section-title">Escribe, afíliate,<br/>echa una mano.</h2>
+    </div>
+
+    <div class="contacto-grid">
+      <aside class="contacto-info">
+        <h3 class="contacto-info-title">Dónde encontrarnos</h3>
+        <ul class="contacto-list">
+          <li>
+            <span class="contacto-label">Sede</span>
+            <span class="contacto-value">C/ Mayor, 18 — Molina de Segura</span>
+          </li>
+          <li>
+            <span class="contacto-label">Email</span>
+            <span class="contacto-value">hola@reactorras.org</span>
+          </li>
+          <li>
+            <span class="contacto-label">Teléfono</span>
+            <span class="contacto-value">+34 968 00 00 00</span>
+          </li>
+          <li>
+            <span class="contacto-label">Asamblea abierta</span>
+            <span class="contacto-value">Primer jueves de mes · 19:30 h</span>
+          </li>
+        </ul>
+        <p class="contacto-note">
+          Toda persona que se acerca a la sede es bienvenida, esté o no afiliada.
+          Aquí no hay puertas cerradas ni reuniones secretas.
+        </p>
+      </aside>
+
+      <form class="form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-name">Nombre</label>
+            <input type="text" id="f-name" name="name" required placeholder="Tu nombre" />
+          </div>
+          <div class="form-group">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" required placeholder="tu@email.com" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-phone">Teléfono</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="+34 ..." />
+          </div>
+          <div class="form-group">
+            <label for="f-type">Quiero</label>
+            <select id="f-type" name="type">
+              <option value="">Elegir...</option>
+              <option>Afiliarme al partido</option>
+              <option>Colaborar como voluntario/a</option>
+              <option>Proponer una idea</option>
+              <option>Donación puntual</option>
+              <option>Prensa / medios</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Áreas de interés</label>
+          <div class="checkbox-grid">
+            <label class="checkbox-item"><input type="checkbox" name="areas" value="Vivienda"> Vivienda</label>
+            <label class="checkbox-item"><input type="checkbox" name="areas" value="Servicios públicos"> Servicios públicos</label>
+            <label class="checkbox-item"><input type="checkbox" name="areas" value="Empleo"> Empleo</label>
+            <label class="checkbox-item"><input type="checkbox" name="areas" value="Medio ambiente"> Medio ambiente</label>
+            <label class="checkbox-item"><input type="checkbox" name="areas" value="Cultura y juventud"> Cultura y juventud</label>
+            <label class="checkbox-item"><input type="checkbox" name="areas" value="Transparencia"> Transparencia</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="f-msg">Mensaje</label>
+          <textarea id="f-msg" name="message" placeholder="Cuéntanos en qué te gustaría participar, qué propones o qué nos quieres preguntar."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Enviar mensaje</button>
+
+        <div class="form-success" id="formSuccess">
+          ✓ Mensaje recibido. Te contestaremos personalmente en menos de 48 h.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-mark">RAS</span>
+        <p class="footer-tagline">Reactor de Acción Social<br/>Molina de Segura · 2024–</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Partido</h4>
+        <ul>
+          <li><a href="#manifiesto">Manifiesto</a></li>
+          <li><a href="#compromisos">Compromisos</a></li>
+          <li><a href="#transparencia">Transparencia</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Participa</h4>
+        <ul>
+          <li><a href="#contacto">Afíliate</a></li>
+          <li><a href="#contacto">Voluntariado</a></li>
+          <li><a href="#contacto">Donar</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="privacidad.html">Privacidad</a></li>
+          <li><a href="codigo-etico.html">Código ético</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 RAS · Reactor de Acción Social</span>
+      <span>Hecho en Molina de Segura</span>
+    </div>
+  </footer>
+
+  <!-- mobile bottom nav -->
+  <nav class="bottom-nav" aria-label="Navegación móvil">
+    <a href="#manifiesto">Inicio</a>
+    <a href="#compromisos">Programa</a>
+    <a href="#transparencia">Cuentas</a>
+    <a href="#contacto">Únete</a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

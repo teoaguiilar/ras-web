@@ -78,3 +78,69 @@ if (form && success) {
     setTimeout(() => success.classList.remove('show'), 6000);
   });
 }
+
+// ============================================================
+// AÑADIDOS (no modifican lo anterior)
+// ============================================================
+
+// ----------------------------------------------------------
+// Banner de cookies (localStorage: ras-cookies-accepted)
+// ----------------------------------------------------------
+(function () {
+  const banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+  const KEY = 'ras-cookies-accepted';
+
+  // Si ya hay decisión guardada, no mostrar el banner
+  if (localStorage.getItem(KEY) === null) {
+    banner.classList.remove('hidden');
+  }
+
+  const decide = (value) => {
+    try { localStorage.setItem(KEY, value); } catch (e) {}
+    banner.classList.add('hidden');
+  };
+
+  const accept = document.getElementById('cookieAccept');
+  const reject = document.getElementById('cookieReject');
+  if (accept) accept.addEventListener('click', () => decide('true'));
+  if (reject) reject.addEventListener('click', () => decide('false'));
+})();
+
+// ----------------------------------------------------------
+// Formularios de contacto / afiliación (envío por mailto, sin backend)
+// Cada <form data-contact-form data-mailto-to="..." data-mailto-subject="...">
+// ----------------------------------------------------------
+document.querySelectorAll('form[data-contact-form]').forEach(f => {
+  const ok = f.querySelector('[data-form-success]');
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+
+    // Validación de campos requeridos
+    const required = Array.from(f.querySelectorAll('[required]'));
+    const missing = required.find(el => !el.value.trim());
+    if (missing) { missing.focus(); return; }
+
+    // Construir el cuerpo del correo con los campos rellenos
+    const to = f.getAttribute('data-mailto-to') || 'contacto@ras-partido-politico.es';
+    const subject = f.getAttribute('data-mailto-subject') || 'Mensaje desde la web de RAS';
+    const lines = [];
+    f.querySelectorAll('input, textarea, select').forEach(el => {
+      if (!el.name || el.type === 'checkbox' && !el.checked) return;
+      const label = (el.getAttribute('data-label') || el.name);
+      if (el.value.trim()) lines.push(label + ': ' + el.value.trim());
+    });
+    const body = encodeURIComponent(lines.join('\n'));
+    const mailto = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + body;
+
+    // Abrir el cliente de correo del visitante
+    window.location.href = mailto;
+
+    // Feedback visual
+    if (ok) {
+      ok.classList.add('show');
+      setTimeout(() => ok.classList.remove('show'), 8000);
+    }
+    f.reset();
+  });
+});

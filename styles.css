@@ -149,6 +149,7 @@ p { font-family: var(--mono); }
   transition: border-color 0.15s linear, color 0.15s linear;
 }
 .nav-links a:hover { color: var(--amarillo); border-bottom-color: var(--amarillo); }
+.nav-links a[aria-current="page"] { color: var(--amarillo); border-bottom-color: var(--amarillo); }
 
 .nav-cta {
   font-family: var(--bn);
@@ -286,6 +287,17 @@ p { font-family: var(--mono); }
   text-transform: uppercase;
   max-width: 1600px;
   margin: 0 auto;
+}
+.hero-mark-slogan {
+  display: block;
+  font-family: var(--bn);
+  font-size: 2rem; /* 32px en desktop */
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--amarillo);
+  text-align: left;
+  line-height: 1;
+  margin-top: 14px;
 }
 
 .hero-grid {
@@ -748,6 +760,13 @@ p { font-family: var(--mono); }
   color: var(--papel);
   line-height: 1.6;
 }
+.footer-slogan {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--amarillo);
+}
 .footer-col h4 {
   font-family: var(--mono);
   font-size: 0.7rem;
@@ -987,6 +1006,7 @@ p { font-family: var(--mono); }
   }
   .hero-mark-text { font-size: clamp(5rem, 28vw, 9rem); max-width: 100%; }
   .hero-mark-sub { max-width: 100%; }
+  .hero-mark-slogan { font-size: 1.5rem; }
   .hero-slogan { margin-top: 0; padding: 26px var(--gutter); }
   .hero-slogan-text { font-size: clamp(2.4rem, 11vw, 4rem); line-height: 0.96; }
   .hero-col { padding: 36px var(--gutter); }
@@ -1018,4 +1038,426 @@ p { font-family: var(--mono); }
 
   .bottom-nav { display: grid; }
   body { padding-bottom: 56px; }
+}
+
+/* ============================================================
+   12. BOTONES / CTA
+   ============================================================ */
+.btn {
+  display: inline-block;
+  font-family: var(--bn);
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 16px 30px 12px;
+  border: var(--rule) solid transparent;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 0.15s linear, color 0.15s linear;
+}
+/* amarillo sólido, texto negro */
+.btn-solid { background: var(--amarillo); color: var(--negro); border-color: var(--amarillo); }
+.btn-solid:hover { background: var(--negro); color: var(--amarillo); border-color: var(--amarillo); }
+/* outline amarillo (sobre fondo negro) */
+.btn-outline { background: transparent; color: var(--amarillo); border-color: var(--amarillo); }
+.btn-outline:hover { background: var(--amarillo); color: var(--negro); }
+/* negro sólido, texto amarillo */
+.btn-dark { background: var(--negro); color: var(--amarillo); border-color: var(--negro); }
+.btn-dark:hover { background: transparent; color: var(--negro); }
+
+/* ============================================================
+   13. HERO — CTAs bajo el lema
+   ============================================================ */
+.hero-cta-row {
+  background: var(--negro);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 36px var(--gutter);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   14. QUIÉNES SOMOS
+   ============================================================ */
+.about {
+  position: relative;
+  background: var(--negro);
+  color: var(--papel);
+  padding: 96px var(--gutter);
+  overflow: hidden;
+}
+.about-year {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+  font-family: var(--bn);
+  font-size: clamp(14rem, 34vw, 32rem);
+  line-height: 0.8;
+  color: rgba(255,209,0,0.10);
+  pointer-events: none;
+  z-index: 0;
+}
+.about-grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  gap: 48px;
+}
+.about-text .section-eyebrow { color: var(--amarillo); }
+.about-text .section-title { color: var(--papel); margin-bottom: 28px; }
+.about-text p {
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--papel);
+  max-width: 60ch;
+}
+.about-bee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-bee img { width: 100%; max-width: 360px; height: auto; }
+
+/* ============================================================
+   15. ÚNETE + FORMULARIOS SOBRE FONDO CLARO
+   ============================================================ */
+.unete {
+  background: var(--amarillo);
+  color: var(--negro);
+  padding: 96px var(--gutter);
+}
+.unete-head { max-width: 1600px; margin: 0 auto 48px; }
+.unete .section-eyebrow { color: var(--muted); }
+.unete .section-title { color: var(--negro); }
+
+/* formulario sobre fondo claro (amarillo/papel): bordes negros */
+.form-light {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.contacto-grid .form-light { max-width: none; margin: 0; }
+.form-light .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 0;
+}
+.form-light .form-group { margin-bottom: 28px; display: flex; flex-direction: column; }
+.form-light label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--negro);
+  margin-bottom: 10px;
+}
+.form-light input,
+.form-light textarea {
+  font-family: var(--mono);
+  font-size: 1rem;
+  color: var(--negro);
+  background: transparent;
+  border: none;
+  border-bottom: var(--rule) solid var(--negro);
+  padding: 10px 0;
+  outline: none;
+  border-radius: 0;
+  width: 100%;
+  transition: border-bottom-width 0.15s linear;
+}
+.form-light input::placeholder,
+.form-light textarea::placeholder { color: rgba(10,10,10,0.45); font-style: italic; }
+.form-light input:focus,
+.form-light textarea:focus { border-bottom-width: var(--rule-thick); }
+.form-light textarea { resize: vertical; min-height: 120px; }
+.form-light .form-submit {
+  font-family: var(--bn);
+  font-size: 1.6rem;
+  letter-spacing: 0.06em;
+  background: var(--negro);
+  color: var(--amarillo);
+  padding: 18px 36px 14px;
+  cursor: pointer;
+  border: var(--rule-thick) solid var(--negro);
+  border-radius: 0;
+  transition: background 0.15s linear, color 0.15s linear;
+}
+.form-light .form-submit:hover { background: transparent; color: var(--negro); }
+.form-note {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-top: 18px;
+}
+.form-note a { border-bottom: 1px solid var(--negro); }
+.form-light .form-success {
+  display: none;
+  margin-top: 20px;
+  padding: 16px 20px;
+  border: var(--rule) solid var(--negro);
+  background: rgba(10,10,10,0.06);
+  color: var(--negro);
+  font-family: var(--mono);
+  font-size: 0.9rem;
+}
+.form-light .form-success.show { display: block; }
+
+/* ============================================================
+   15b. CONTACTO sobre fondo claro (dos columnas)
+   ============================================================ */
+.contacto-light {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 0;
+  align-items: start;
+}
+.contacto-data { padding-right: 56px; border-right: var(--rule) solid var(--negro); }
+.contacto-data-title {
+  font-family: var(--bn);
+  font-size: 2rem;
+  color: var(--negro);
+  margin-bottom: 28px;
+  letter-spacing: 0.02em;
+}
+.contacto-data ul { display: flex; flex-direction: column; }
+.contacto-data li {
+  padding: 18px 0;
+  border-bottom: 1px dashed var(--negro);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contacto-data .clabel {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.contacto-data .cvalue { font-family: var(--mono); font-size: 0.98rem; color: var(--negro); }
+.contacto-data .cvalue a { border-bottom: 1px solid var(--negro); }
+.contacto-light .form-light { padding-left: 56px; max-width: none; margin: 0; }
+
+/* ============================================================
+   16. RESUMEN COMPROMISOS (botón ver más)
+   ============================================================ */
+.compromisos-more {
+  max-width: 1600px;
+  margin: 40px auto 0;
+  padding-top: 32px;
+  border-top: var(--rule) solid var(--negro);
+}
+
+/* ============================================================
+   17. CABECERA DE PÁGINA (franja negra con título grande)
+   ============================================================ */
+.page-header {
+  background: var(--negro);
+  color: var(--amarillo);
+  padding: 80px var(--gutter) 64px;
+  border-bottom: var(--rule-thick) solid var(--amarillo);
+}
+.page-header-inner { max-width: 1600px; margin: 0 auto; }
+.page-header-title {
+  font-family: var(--bn);
+  font-size: clamp(4rem, 14vw, 11rem);
+  line-height: 0.86;
+  color: var(--amarillo);
+  letter-spacing: 0.01em;
+}
+.page-header-sub {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--papel);
+  margin-top: 18px;
+  max-width: 60ch;
+}
+
+/* ============================================================
+   18. PROGRAMA — compromisos a ancho completo, alternos papel/negro
+   ============================================================ */
+.programa-search {
+  background: var(--papel);
+  padding: 48px var(--gutter) 8px;
+}
+.programa-search .program-search {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.comp-band {
+  padding: 44px var(--gutter);
+  border-bottom: var(--rule) solid var(--negro);
+  background: var(--papel);
+}
+.comp-band:first-child { border-top: var(--rule) solid var(--negro); }
+.comp-band[hidden] { display: none; }
+.comp-band-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(140px, 0.5fr) 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.comp-band--dark { background: var(--negro); border-color: var(--negro); }
+.comp-band--dark .compromiso-num { color: rgba(255,209,0,0.22); }
+.comp-band--dark .compromiso-title { color: var(--amarillo); }
+.comp-band--dark .compromiso-text { color: var(--papel); }
+.programa-empty {
+  background: var(--papel);
+  padding: 32px var(--gutter) 64px;
+}
+.programa-empty p {
+  max-width: 1600px;
+  margin: 0 auto;
+  font-family: var(--mono);
+  border: var(--rule) dashed var(--negro);
+  padding: 24px;
+  text-align: center;
+}
+
+/* ============================================================
+   19. TRANSPARENCIA — financiación, documentos, marca de agua
+   ============================================================ */
+.watermark { position: relative; overflow: hidden; }
+.watermark::after {
+  content: "DOCUMENTO PÚBLICO";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-28deg);
+  font-family: var(--bn);
+  font-size: clamp(3rem, 11vw, 9rem);
+  letter-spacing: 0.05em;
+  color: rgba(10,10,10,0.05);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+}
+.watermark > * { position: relative; z-index: 1; }
+
+.bloque-papel {
+  background: var(--papel);
+  color: var(--negro);
+  padding: 80px var(--gutter);
+}
+.bloque-papel .doc-list { margin-top: 8px; }
+.bloque-negro {
+  background: var(--negro);
+  color: var(--papel);
+  padding: 80px var(--gutter);
+}
+.bloque-negro .section-eyebrow { color: var(--amarillo); }
+.bloque-negro .section-title { color: var(--papel); }
+.bloque-inner { max-width: 1600px; margin: 0 auto; }
+.bloque-negro p {
+  font-family: var(--mono);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--papel);
+  max-width: 70ch;
+  margin-bottom: 16px;
+}
+.bloque-ref {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-top: 20px;
+}
+.doc-list {
+  max-width: 1600px;
+  margin: 0 auto;
+  border-top: var(--rule) solid var(--negro);
+}
+.doc-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: var(--rule) solid var(--negro);
+  font-family: var(--mono);
+  font-size: 0.98rem;
+}
+.doc-list .doc-state {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ============================================================
+   20. BANNER DE COOKIES
+   ============================================================ */
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 120;
+  background: var(--negro);
+  color: var(--papel);
+  border-top: var(--rule-thick) solid var(--amarillo);
+  padding: 20px var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.cookie-banner.hidden { display: none; }
+.cookie-text {
+  font-family: var(--mono);
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--papel);
+  max-width: 70ch;
+}
+.cookie-text a { color: var(--amarillo); border-bottom: 1px solid var(--amarillo); }
+.cookie-actions { display: flex; gap: 14px; flex-shrink: 0; }
+.cookie-actions .btn { font-size: 1.2rem; padding: 10px 22px 7px; }
+
+/* ============================================================
+   21. RESPONSIVE — componentes nuevos
+   ============================================================ */
+@media (max-width: 1024px) {
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-bee { order: -1; }
+  .about-bee img { max-width: 240px; }
+}
+
+@media (max-width: 720px) {
+  .hero-cta-row { padding: 24px var(--gutter); gap: 12px; }
+  .hero-cta-row .btn { width: 100%; text-align: center; }
+  .about { padding: 64px var(--gutter); }
+  .unete { padding: 64px var(--gutter); }
+  .form-light .form-row { grid-template-columns: 1fr; gap: 0; }
+  .page-header { padding: 56px var(--gutter) 40px; }
+  .bloque-negro { padding: 56px var(--gutter); }
+  .doc-list li { flex-direction: column; gap: 4px; }
+  .cookie-banner { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .cookie-actions { width: 100%; }
+  .cookie-actions .btn { flex: 1; text-align: center; }
+  .watermark::after { font-size: clamp(2.4rem, 16vw, 5rem); }
+
+  .comp-band { padding: 30px var(--gutter); }
+  .comp-band-inner { grid-template-columns: 1fr; gap: 8px; }
+
+  .contacto-light { grid-template-columns: 1fr; }
+  .contacto-data { padding-right: 0; border-right: none; padding-bottom: 40px; border-bottom: var(--rule) solid var(--negro); margin-bottom: 40px; }
+  .contacto-light .form-light { padding-left: 0; }
 }

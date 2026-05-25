@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- ============================================================
+       META
+       ============================================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>RAS · Reactor de Acción Social — Molina de Segura</title>
-  <meta name="description" content="RAS, Reactor de Acción Social. Partido político de Molina de Segura. No venimos a prometer, venimos a trabajar." />
-  <meta property="og:title" content="RAS · Reactor de Acción Social" />
+  <meta name="description" content="Partido RAS, Reactor de Acción Social. Partido político de ámbito local de Molina de Segura. Por y para Molina de Segura: no venimos a prometer, venimos a trabajar." />
+  <meta property="og:title" content="RAS · Reactor de Acción Social — Molina de Segura" />
   <meta property="og:type" content="website" />
-  <meta property="og:description" content="Partido político de Molina de Segura. No venimos a prometer, venimos a trabajar." />
+  <meta property="og:description" content="Partido político de ámbito local de Molina de Segura. No venimos a prometer, venimos a trabajar." />
+  <link rel="canonical" href="https://www.ras-partido-politico.es/" />
 
+  <!-- FUENTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -23,48 +26,52 @@
        ============================================================ -->
   <header class="navbar" id="navbar">
     <div class="navbar-inner">
-      <a href="#" class="logo" aria-label="RAS — Reactor de Acción Social">
+      <a href="index.html" class="logo" aria-label="RAS — Reactor de Acción Social">
         <span class="logo-mark">RAS</span>
         <span class="logo-sub">Reactor<br/>de Acción Social</span>
       </a>
-
       <nav class="nav-links" aria-label="Navegación principal">
-        <a href="#manifiesto">Manifiesto</a>
-        <a href="#compromisos">Compromisos</a>
-        <a href="#transparencia">Transparencia</a>
-        <a href="#contacto">Contacto</a>
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="programa.html">Programa</a>
+        <a href="transparencia.html">Transparencia</a>
+        <a href="contacto.html">Contacto</a>
       </nav>
-
-      <a href="#contacto" class="nav-cta">Únete</a>
-
+      <a href="#unete" class="nav-cta">Únete</a>
       <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- mobile drawer -->
+  <!-- menú móvil -->
   <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <a href="#manifiesto">Manifiesto</a>
-    <a href="#compromisos">Compromisos</a>
-    <a href="#transparencia">Transparencia</a>
-    <a href="#contacto">Contacto</a>
-    <a href="#contacto" class="nav-cta nav-cta--mobile">Únete</a>
+    <a href="index.html">Inicio</a>
+    <a href="programa.html">Programa</a>
+    <a href="transparencia.html">Transparencia</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="#unete" class="nav-cta nav-cta--mobile">Únete</a>
   </aside>
 
   <!-- ============================================================
        HERO
        ============================================================ -->
-  <section class="hero" id="manifiesto">
+  <section class="hero" id="inicio">
     <div class="hero-mark">
       <div class="hero-mark-inner">
         <span class="hero-mark-text">RAS</span>
         <span class="hero-mark-sub">Reactor de Acción Social · Molina de Segura</span>
+        <span class="hero-mark-slogan">Por y para Molina de Segura</span>
       </div>
     </div>
 
     <div class="hero-slogan">
       <p class="hero-slogan-text">No venimos a prometer,<br/>venimos a trabajar.</p>
+    </div>
+
+    <!-- CTAs bajo el lema -->
+    <div class="hero-cta-row">
+      <a href="programa.html" class="btn btn-solid">Conoce el programa</a>
+      <a href="#unete" class="btn btn-outline">Únete al partido</a>
     </div>
 
     <div class="hero-grid">
@@ -103,35 +110,24 @@
   </section>
 
   <!-- ============================================================
-       COMPROMISOS
+       COMPROMISOS (resumen — solo 4 en el index)
        ============================================================ -->
   <section class="compromisos" id="compromisos">
     <div class="compromisos-head">
       <div class="compromisos-head-left">
         <p class="section-eyebrow">— Programa político</p>
-        <h2 class="section-title">Ocho compromisos<br/>firmados con la ciudad.</h2>
+        <h2 class="section-title">Nuestros compromisos<br/>por Molina.</h2>
       </div>
       <div class="compromisos-head-right">
         <p class="section-note">
-          Nuestros compromisos por Molina de Segura: un programa cercano, local e
-          independiente de los partidos nacionales. Por y para el pueblo de Molina.
+          Un programa cercano, local e independiente de los partidos nacionales.
+          Por y para el pueblo de Molina de Segura.
         </p>
-        <div class="program-search">
-          <label for="program-search-input" class="program-search-label">Buscar en programa</label>
-          <input
-            type="search"
-            id="program-search-input"
-            class="program-search-input"
-            data-program-search
-            placeholder="Escribe una palabra: empresas, fiscalidad, seguridad…"
-            aria-label="Buscar en el programa político"
-          />
-        </div>
       </div>
     </div>
 
-    <ol class="compromisos-list" data-program-list>
-      <li class="compromiso" data-program-item>
+    <ol class="compromisos-list">
+      <li class="compromiso">
         <span class="compromiso-num">01</span>
         <div class="compromiso-body">
           <h3 class="compromiso-title">Apoyo real a empresas y autónomos</h3>
@@ -141,8 +137,7 @@
           </p>
         </div>
       </li>
-
-      <li class="compromiso" data-program-item>
+      <li class="compromiso">
         <span class="compromiso-num">02</span>
         <div class="compromiso-body">
           <h3 class="compromiso-title">Presión fiscal justa</h3>
@@ -152,8 +147,7 @@
           </p>
         </div>
       </li>
-
-      <li class="compromiso" data-program-item>
+      <li class="compromiso">
         <span class="compromiso-num">03</span>
         <div class="compromiso-body">
           <h3 class="compromiso-title">Seguridad ciudadana</h3>
@@ -163,8 +157,7 @@
           </p>
         </div>
       </li>
-
-      <li class="compromiso" data-program-item>
+      <li class="compromiso">
         <span class="compromiso-num">04</span>
         <div class="compromiso-body">
           <h3 class="compromiso-title">Participación ciudadana</h3>
@@ -174,226 +167,76 @@
           </p>
         </div>
       </li>
-
-      <li class="compromiso" data-program-item>
-        <span class="compromiso-num">05</span>
-        <div class="compromiso-body">
-          <h3 class="compromiso-title">Transparencia y limpieza</h3>
-          <p class="compromiso-text">
-            Cero tolerancia con la corrupción · Canal anónimo para denuncias
-            ciudadanas · Transparencia total en la gestión.
-          </p>
-        </div>
-      </li>
-
-      <li class="compromiso" data-program-item>
-        <span class="compromiso-num">06</span>
-        <div class="compromiso-body">
-          <h3 class="compromiso-title">Decisiones locales, sin imposiciones externas</h3>
-          <p class="compromiso-text">
-            Independencia de los partidos nacionales · Prioridad absoluta a los
-            intereses de Molina · Gestión con transparencia y sentido común.
-          </p>
-        </div>
-      </li>
-
-      <li class="compromiso" data-program-item>
-        <span class="compromiso-num">07</span>
-        <div class="compromiso-body">
-          <h3 class="compromiso-title">Medio ambiente y salud</h3>
-          <p class="compromiso-text">
-            Revisión de la planta de biogás con consulta ciudadana · Defensa de la
-            salud y del entorno de Molina.
-          </p>
-        </div>
-      </li>
-
-      <li class="compromiso" data-program-item>
-        <span class="compromiso-num">08</span>
-        <div class="compromiso-body">
-          <h3 class="compromiso-title">Cercanos, próximos, útiles</h3>
-          <p class="compromiso-text">
-            Canal directo con los vecinos · Escuchamos para actuar · Soluciones reales
-            a problemas reales.
-          </p>
-        </div>
-      </li>
     </ol>
 
-    <p class="compromisos-empty" data-program-empty hidden>
-      No hay compromisos que coincidan con esa búsqueda.
-    </p>
+    <div class="compromisos-more">
+      <a href="programa.html" class="btn btn-dark">Ver los 8 compromisos →</a>
+    </div>
   </section>
 
   <!-- ============================================================
-       TRANSPARENCIA
+       QUIÉNES SOMOS
        ============================================================ -->
-  <section class="transparencia" id="transparencia">
-    <div class="transparencia-head">
-      <p class="section-eyebrow">— Ficha pública del partido</p>
-      <h2 class="section-title">Quiénes somos.<br/>Datos oficiales.<br/>Sin letra pequeña.</h2>
-    </div>
-
-    <div class="transparencia-doc">
-      <div class="transparencia-col">
-        <dl class="ficha">
-          <div class="ficha-row">
-            <dt>Denominación</dt>
-            <dd>Reactor de Acción Social (RAS)</dd>
-          </div>
-          <div class="ficha-row">
-            <dt>Siglas</dt>
-            <dd>R.A.S.</dd>
-          </div>
-          <div class="ficha-row">
-            <dt>Símbolo</dt>
-            <dd>La abeja — trabajo, libertad, dedicación y constancia</dd>
-          </div>
-          <div class="ficha-row">
-            <dt>Ámbito</dt>
-            <dd>Municipal — Molina de Segura (Región de Murcia)</dd>
-          </div>
-          <div class="ficha-row">
-            <dt>NIF</dt>
-            <dd>G22558571</dd>
-          </div>
-          <div class="ficha-row">
-            <dt>Inscripción</dt>
-            <dd>Registro de Partidos Políticos · Tomo IX, folio 2794 (27/02/2026)</dd>
-          </div>
-        </dl>
-      </div>
-
-      <div class="transparencia-col">
-        <dl class="ficha">
-          <div class="ficha-row">
-            <dt>Domicilio social</dt>
-            <dd>Calle Vaguada nº 12, bajo — 30500 Molina de Segura (Murcia)</dd>
-          </div>
-          <div class="ficha-row">
-            <dt>Órganos</dt>
-            <dd>Asamblea General y Comité Ejecutivo</dd>
-          </div>
-          <div class="ficha-row">
-            <dt>Correo oficial</dt>
-            <dd>contacto@ras-partido-politico.es · info@ras-partido-politico.com</dd>
-          </div>
-          <div class="ficha-row">
-            <dt>Web oficial</dt>
-            <dd>ras-partido-politico.es · ras-partido-politico.com</dd>
-          </div>
-          <div class="ficha-row">
-            <dt>Documentación</dt>
-            <dd>Estatutos y código ético del partido (disponibles a petición)</dd>
-          </div>
-          <div class="ficha-row">
-            <dt>Próximas elecciones</dt>
-            <dd>Municipales 2027 — Molina de Segura</dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-
-    <p class="transparencia-stamp">
-      Datos públicos · Registro de Partidos Políticos del Ministerio del Interior
-    </p>
-  </section>
-
-  <!-- ============================================================
-       CONTACTO
-       ============================================================ -->
-  <section class="contacto" id="contacto">
-    <div class="contacto-head">
-      <p class="section-eyebrow">— Súmate</p>
-      <h2 class="section-title">Escribe, afíliate,<br/>echa una mano.</h2>
-    </div>
-
-    <div class="contacto-grid">
-      <aside class="contacto-info">
-        <h3 class="contacto-info-title">Dónde encontrarnos</h3>
-        <ul class="contacto-list">
-          <li>
-            <span class="contacto-label">Correo</span>
-            <span class="contacto-value">contacto@ras-partido-politico.es</span>
-          </li>
-          <li>
-            <span class="contacto-label">Correo</span>
-            <span class="contacto-value">info@ras-partido-politico.com</span>
-          </li>
-          <li>
-            <span class="contacto-label">Web</span>
-            <span class="contacto-value">ras-partido-politico.es · ras-partido-politico.com</span>
-          </li>
-          <li>
-            <span class="contacto-label">Redes</span>
-            <span class="contacto-value">Facebook · Instagram</span>
-          </li>
-          <li>
-            <span class="contacto-label">Ámbito</span>
-            <span class="contacto-value">Molina de Segura (Murcia)</span>
-          </li>
-        </ul>
-        <p class="contacto-note">
-          Escríbenos por correo o por redes sociales. Aquí no hay puertas cerradas:
-          te leemos y te respondemos. Por y para Molina de Segura.
+  <section class="about" id="quienes-somos">
+    <span class="about-year" aria-hidden="true">2025</span>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-eyebrow">— Quiénes somos</p>
+        <h2 class="section-title">El cambio que<br/>Molina necesita.</h2>
+        <!-- EDITAR: texto definitivo del cliente -->
+        <p>
+          Somos un partido político de ámbito local nacido en Molina de Segura en 2025.
+          No somos la alternativa — somos el cambio que Molina necesita. Transparencia total,
+          acción directa, resultados concretos.
         </p>
-      </aside>
-
-      <form class="form" id="contactForm" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="f-name">Nombre</label>
-            <input type="text" id="f-name" name="name" required placeholder="Tu nombre" />
-          </div>
-          <div class="form-group">
-            <label for="f-email">Email</label>
-            <input type="email" id="f-email" name="email" required placeholder="tu@email.com" />
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="f-phone">Teléfono</label>
-            <input type="tel" id="f-phone" name="phone" placeholder="+34 ..." />
-          </div>
-          <div class="form-group">
-            <label for="f-type">Quiero</label>
-            <select id="f-type" name="type">
-              <option value="">Elegir...</option>
-              <option>Afiliarme al partido</option>
-              <option>Colaborar como voluntario/a</option>
-              <option>Proponer una idea</option>
-              <option>Donación puntual</option>
-              <option>Prensa / medios</option>
-              <option>Otro</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>Áreas de interés</label>
-          <div class="checkbox-grid">
-            <label class="checkbox-item"><input type="checkbox" name="areas" value="Vivienda"> Vivienda</label>
-            <label class="checkbox-item"><input type="checkbox" name="areas" value="Servicios públicos"> Servicios públicos</label>
-            <label class="checkbox-item"><input type="checkbox" name="areas" value="Empleo"> Empleo</label>
-            <label class="checkbox-item"><input type="checkbox" name="areas" value="Medio ambiente"> Medio ambiente</label>
-            <label class="checkbox-item"><input type="checkbox" name="areas" value="Cultura y juventud"> Cultura y juventud</label>
-            <label class="checkbox-item"><input type="checkbox" name="areas" value="Transparencia"> Transparencia</label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="f-msg">Mensaje</label>
-          <textarea id="f-msg" name="message" placeholder="Cuéntanos en qué te gustaría participar, qué propones o qué nos quieres preguntar."></textarea>
-        </div>
-
-        <button type="submit" class="form-submit">Enviar mensaje</button>
-
-        <div class="form-success" id="formSuccess">
-          ✓ Mensaje recibido. Te contestaremos personalmente en menos de 48 h.
-        </div>
-      </form>
+      </div>
+      <div class="about-bee">
+        <img src="assets/bee.png" alt="La abeja, símbolo del Partido RAS" />
+      </div>
     </div>
+  </section>
+
+  <!-- ============================================================
+       ÚNETE
+       ============================================================ -->
+  <section class="unete" id="unete">
+    <div class="unete-head">
+      <p class="section-eyebrow">— Afíliate</p>
+      <h2 class="section-title">Forma parte del cambio.</h2>
+    </div>
+
+    <form class="form-light" data-contact-form
+          data-mailto-to="contacto@ras-partido-politico.es"
+          data-mailto-subject="Solicitud de afiliación — web RAS">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="u-name">Nombre</label>
+          <input type="text" id="u-name" name="nombre" data-label="Nombre" required placeholder="Tu nombre" />
+        </div>
+        <div class="form-group">
+          <label for="u-email">Email</label>
+          <input type="email" id="u-email" name="email" data-label="Email" required placeholder="tu@email.com" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="u-phone">Teléfono</label>
+          <input type="tel" id="u-phone" name="telefono" data-label="Teléfono" placeholder="+34 ..." />
+        </div>
+        <div class="form-group">
+          <label for="u-msg">Mensaje</label>
+          <input type="text" id="u-msg" name="mensaje" data-label="Mensaje" placeholder="¿Cómo quieres colaborar?" />
+        </div>
+      </div>
+      <button type="submit" class="form-submit">Quiero unirme</button>
+      <p class="form-note">
+        Tus datos se tratarán según nuestra <a href="privacidad.html">Política de Privacidad</a>.
+        No los compartiremos con terceros.
+      </p>
+      <div class="form-success" data-form-success>
+        ✓ Gracias. Se abrirá tu cliente de correo para enviarnos la solicitud.
+      </div>
+    </form>
   </section>
 
   <!-- ============================================================
@@ -403,49 +246,55 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <span class="footer-mark">RAS</span>
-        <p class="footer-tagline">Reactor de Acción Social<br/>Por y para Molina de Segura</p>
+        <p class="footer-slogan">Por y para Molina de Segura</p>
+        <p class="footer-tagline">No venimos a prometer,<br/>venimos a trabajar.</p>
       </div>
-
       <div class="footer-col">
-        <h4>Partido</h4>
+        <h4>Navegación</h4>
         <ul>
-          <li><a href="#manifiesto">Manifiesto</a></li>
-          <li><a href="#compromisos">Compromisos</a></li>
-          <li><a href="#transparencia">Transparencia</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="programa.html">Programa</a></li>
+          <li><a href="transparencia.html">Transparencia</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
-        <h4>Participa</h4>
+        <h4>El partido</h4>
         <ul>
-          <li><a href="#contacto">Afíliate</a></li>
-          <li><a href="#contacto">Voluntariado</a></li>
-          <li><a href="#contacto">Donar</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="aviso-legal.html">Aviso legal</a></li>
-          <li><a href="privacidad.html">Privacidad</a></li>
+          <li>Partido RAS — Reactor de Acción Social</li>
+          <li>NIF: G22558571</li>
+          <li>C/ Vaguada Nº 12 Bajo, 30500 Molina de Segura, Murcia</li>
+          <li><a href="https://www.ras-partido-politico.es">www.ras-partido-politico.es</a></li>
         </ul>
       </div>
     </div>
-
     <div class="footer-bottom">
-      <span>© 2026 RAS · Reactor de Acción Social</span>
+      <span>© 2026 Partido RAS · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a></span>
       <span>Hecho en Molina de Segura</span>
     </div>
   </footer>
 
-  <!-- mobile bottom nav -->
+  <!-- navegación inferior móvil -->
   <nav class="bottom-nav" aria-label="Navegación móvil">
-    <a href="#manifiesto">Inicio</a>
-    <a href="#compromisos">Programa</a>
-    <a href="#transparencia">Cuentas</a>
-    <a href="#contacto">Únete</a>
+    <a href="index.html">Inicio</a>
+    <a href="programa.html">Programa</a>
+    <a href="transparencia.html">Cuentas</a>
+    <a href="contacto.html">Contacto</a>
   </nav>
+
+  <!-- ============================================================
+       BANNER DE COOKIES
+       ============================================================ -->
+  <div class="cookie-banner hidden" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">
+    <p class="cookie-text">
+      Usamos cookies propias para el funcionamiento del sitio. No usamos cookies de terceros
+      ni de seguimiento. <a href="privacidad.html">Más información</a>
+    </p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-solid" id="cookieAccept">Aceptar</button>
+      <button type="button" class="btn btn-outline" id="cookieReject">Rechazar</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

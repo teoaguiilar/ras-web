@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ============================================================
+       META
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programa · RAS — Reactor de Acción Social</title>
+  <meta name="description" content="Los 8 compromisos del Partido RAS con Molina de Segura. Compromisos reales, sin promesas vacías." />
+  <meta property="og:title" content="Programa · Los 8 compromisos del Partido RAS" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Compromisos reales con Molina de Segura. Sin promesas vacías." />
+  <link rel="canonical" href="https://www.ras-partido-politico.es/programa.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo" aria-label="RAS — Reactor de Acción Social">
+        <span class="logo-mark">RAS</span>
+        <span class="logo-sub">Reactor<br/>de Acción Social</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="programa.html" aria-current="page">Programa</a>
+        <a href="transparencia.html">Transparencia</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <a href="index.html#unete" class="nav-cta">Únete</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="index.html">Inicio</a>
+    <a href="programa.html">Programa</a>
+    <a href="transparencia.html">Transparencia</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="index.html#unete" class="nav-cta nav-cta--mobile">Únete</a>
+  </aside>
+
+  <!-- ============================================================
+       CABECERA DE PÁGINA
+       ============================================================ -->
+  <section class="page-header">
+    <div class="page-header-inner">
+      <h1 class="page-header-title">Nuestros 8 compromisos</h1>
+      <p class="page-header-sub">Compromisos reales con Molina de Segura. Sin promesas vacías.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BUSCADOR
+       ============================================================ -->
+  <div class="programa-search">
+    <div class="program-search">
+      <label for="program-search-input" class="program-search-label">Buscar en el programa</label>
+      <input
+        type="search"
+        id="program-search-input"
+        class="program-search-input"
+        data-program-search
+        placeholder="Escribe una palabra: empresas, fiscalidad, seguridad…"
+        aria-label="Buscar en el programa político"
+      />
+    </div>
+  </div>
+
+  <!-- ============================================================
+       8 COMPROMISOS (bandas alternas papel / negro)
+       ============================================================ -->
+  <div data-program-list>
+
+    <article class="comp-band" data-program-item>
+      <div class="comp-band-inner">
+        <span class="compromiso-num">01</span>
+        <div class="compromiso-body">
+          <h2 class="compromiso-title">Apoyo real a empresas y autónomos</h2>
+          <p class="compromiso-text">
+            Más atención institucional · Prioridad a las empresas locales en los contratos
+            públicos · Fomento del empleo y del desarrollo industrial de Molina de Segura.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="comp-band comp-band--dark" data-program-item>
+      <div class="comp-band-inner">
+        <span class="compromiso-num">02</span>
+        <div class="compromiso-body">
+          <h2 class="compromiso-title">Presión fiscal justa</h2>
+          <p class="compromiso-text">
+            Bajada de impuestos injustos y «encubiertos» · Revisión del IBI y de las tasas
+            municipales · Impuestos acordes a los servicios que se prestan realmente.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="comp-band" data-program-item>
+      <div class="comp-band-inner">
+        <span class="compromiso-num">03</span>
+        <div class="compromiso-body">
+          <h2 class="compromiso-title">Seguridad ciudadana</h2>
+          <p class="compromiso-text">
+            Más policía en las calles · Mejor gestión de los recursos y del personal ·
+            Soluciones reales al aumento de la violencia y la inseguridad.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="comp-band comp-band--dark" data-program-item>
+      <div class="comp-band-inner">
+        <span class="compromiso-num">04</span>
+        <div class="compromiso-body">
+          <h2 class="compromiso-title">Participación ciudadana</h2>
+          <p class="compromiso-text">
+            Referéndums en las decisiones importantes · Escuchar a todos los vecinos ·
+            Un partido abierto a todas las ideologías.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="comp-band" data-program-item>
+      <div class="comp-band-inner">
+        <span class="compromiso-num">05</span>
+        <div class="compromiso-body">
+          <h2 class="compromiso-title">Transparencia y limpieza</h2>
+          <p class="compromiso-text">
+            Cero tolerancia con la corrupción · Canal anónimo para denuncias ciudadanas ·
+            Transparencia total en la gestión municipal.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="comp-band comp-band--dark" data-program-item>
+      <div class="comp-band-inner">
+        <span class="compromiso-num">06</span>
+        <div class="compromiso-body">
+          <h2 class="compromiso-title">Decisiones locales, sin imposiciones externas</h2>
+          <p class="compromiso-text">
+            Independencia de los partidos nacionales · Prioridad absoluta a los intereses de
+            Molina · Gestión con transparencia y sentido común.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="comp-band" data-program-item>
+      <div class="comp-band-inner">
+        <span class="compromiso-num">07</span>
+        <div class="compromiso-body">
+          <h2 class="compromiso-title">Medio ambiente y salud</h2>
+          <p class="compromiso-text">
+            Revisión de la planta de biogás con consulta ciudadana · Defensa de la salud y
+            del entorno natural de Molina de Segura.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="comp-band comp-band--dark" data-program-item>
+      <div class="comp-band-inner">
+        <span class="compromiso-num">08</span>
+        <div class="compromiso-body">
+          <h2 class="compromiso-title">Cercanos, próximos, útiles</h2>
+          <p class="compromiso-text">
+            Canal directo con los vecinos · Escuchamos para actuar · Soluciones reales a
+            problemas reales.
+          </p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="programa-empty">
+    <p data-program-empty hidden>No hay compromisos que coincidan con esa búsqueda.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-mark">RAS</span>
+        <p class="footer-slogan">Por y para Molina de Segura</p>
+        <p class="footer-tagline">No venimos a prometer,<br/>venimos a trabajar.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="programa.html">Programa</a></li>
+          <li><a href="transparencia.html">Transparencia</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>El partido</h4>
+        <ul>
+          <li>Partido RAS — Reactor de Acción Social</li>
+          <li>NIF: G22558571</li>
+          <li>C/ Vaguada Nº 12 Bajo, 30500 Molina de Segura, Murcia</li>
+          <li><a href="https://www.ras-partido-politico.es">www.ras-partido-politico.es</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Partido RAS · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a></span>
+      <span>Hecho en Molina de Segura</span>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Navegación móvil">
+    <a href="index.html">Inicio</a>
+    <a href="programa.html">Programa</a>
+    <a href="transparencia.html">Cuentas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- BANNER DE COOKIES -->
+  <div class="cookie-banner hidden" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">
+    <p class="cookie-text">
+      Usamos cookies propias para el funcionamiento del sitio. No usamos cookies de terceros
+      ni de seguimiento. <a href="privacidad.html">Más información</a>
+    </p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-solid" id="cookieAccept">Aceptar</button>
+      <button type="button" class="btn btn-outline" id="cookieReject">Rechazar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -144,3 +144,29 @@ document.querySelectorAll('form[data-contact-form]').forEach(f => {
     f.reset();
   });
 });
+
+// ----------------------------------------------------------
+// Ofuscación de correos (anti-scraping)
+// ----------------------------------------------------------
+document.querySelectorAll('.email-link').forEach(el => {
+  const addr = el.dataset.u + '@' + el.dataset.d;
+  el.addEventListener('click', () => {
+    window.location = 'mailto:' + addr;
+  });
+  el.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.location = 'mailto:' + addr; }
+  });
+  el.textContent = el.dataset.u + '@' + el.dataset.d;
+});
+
+// ----------------------------------------------------------
+// Tras envío con Formspree (_next ?enviado=ok), mostrar #form-ok
+// ----------------------------------------------------------
+(function () {
+  if (!/[?&]enviado=ok\b/.test(location.search)) return;
+  const ok = document.getElementById('form-ok');
+  if (!ok) return;
+  ok.classList.add('show');
+  ok.style.display = 'block';
+  ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+})();

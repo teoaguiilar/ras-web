@@ -1401,6 +1401,30 @@ p { font-family: var(--mono); }
 }
 
 /* ============================================================
+   19b. EMAIL OFUSCADO + MENSAJE DE ÉXITO DEL FORMULARIO
+   ============================================================ */
+.email-link {
+  cursor: pointer;
+  border-bottom: 1px solid currentColor;
+  -webkit-user-select: text;
+  user-select: text;
+}
+.email-link:hover { opacity: 0.85; }
+.email-link:focus { outline: 2px solid var(--amarillo); outline-offset: 2px; }
+
+#form-ok {
+  display: none;
+  background: var(--amarillo);
+  color: var(--negro);
+  padding: 16px;
+  margin-top: 24px;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  border: var(--rule) solid var(--negro);
+}
+#form-ok.show { display: block; }
+
+/* ============================================================
    20. BANNER DE COOKIES
    ============================================================ */
 .cookie-banner {

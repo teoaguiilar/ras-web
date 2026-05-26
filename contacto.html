@@ -74,7 +74,7 @@
           </li>
           <li>
             <span class="clabel">Email</span>
-            <span class="cvalue"><a href="mailto:contacto@ras-partido-politico.es">contacto@ras-partido-politico.es</a></span>
+            <span class="cvalue"><a class="email-link" role="button" tabindex="0" data-u="contacto" data-d="ras-partido-politico.es">correo</a></span>
           </li>
           <li>
             <span class="clabel">Web</span>
@@ -83,43 +83,46 @@
         </ul>
       </aside>
 
-      <!-- Columna derecha: formulario -->
-      <form class="form-light" data-contact-form
-            data-mailto-to="contacto@ras-partido-politico.es"
-            data-mailto-subject="Mensaje desde la web — Contacto RAS">
+      <!-- Columna derecha: formulario (Formspree) -->
+      <form class="form-light" action="https://formspree.io/f/mnjropvv" method="POST">
+        <!-- Campos ocultos de Formspree -->
+        <input type="hidden" name="_subject" value="Nuevo mensaje web RAS">
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_next" value="https://www.ras-partido-politico.es/contacto.html?enviado=ok">
+
         <div class="form-row">
           <div class="form-group">
             <label for="c-name">Nombre</label>
-            <input type="text" id="c-name" name="nombre" data-label="Nombre" required placeholder="Tu nombre" />
+            <input type="text" id="c-name" name="nombre" required placeholder="Tu nombre" />
           </div>
           <div class="form-group">
             <label for="c-email">Email</label>
-            <input type="email" id="c-email" name="email" data-label="Email" required placeholder="tu@email.com" />
+            <input type="email" id="c-email" name="email" required placeholder="tu@email.com" />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label for="c-phone">Teléfono</label>
-            <input type="tel" id="c-phone" name="telefono" data-label="Teléfono" placeholder="+34 ..." />
+            <input type="tel" id="c-phone" name="telefono" placeholder="+34 ..." />
           </div>
           <div class="form-group">
             <label for="c-subject">Asunto</label>
-            <input type="text" id="c-subject" name="asunto" data-label="Asunto" placeholder="Motivo del mensaje" />
+            <input type="text" id="c-subject" name="asunto" placeholder="Motivo del mensaje" />
           </div>
         </div>
         <div class="form-group">
           <label for="c-msg">Mensaje</label>
-          <textarea id="c-msg" name="mensaje" data-label="Mensaje" required placeholder="Cuéntanos en qué podemos ayudarte."></textarea>
+          <textarea id="c-msg" name="mensaje" required placeholder="Cuéntanos en qué podemos ayudarte."></textarea>
         </div>
         <button type="submit" class="form-submit">Enviar mensaje</button>
         <p class="form-note">
           Tus datos se tratarán según nuestra <a href="privacidad.html">Política de Privacidad</a>.
           No los compartiremos con terceros.
         </p>
-        <div class="form-success" data-form-success>
-          ✓ Gracias. Se abrirá tu cliente de correo para enviarnos el mensaje.
-        </div>
       </form>
+
+      <!-- Mensaje de confirmación tras el envío (se muestra con ?enviado=ok) -->
+      <div id="form-ok">Mensaje enviado correctamente. Te responderemos en breve.</div>
 
     </div>
   </section>

@@ -205,27 +205,30 @@
       <h2 class="section-title">Forma parte del cambio.</h2>
     </div>
 
-    <form class="form-light" data-contact-form
-          data-mailto-to="contacto@ras-partido-politico.es"
-          data-mailto-subject="Solicitud de afiliación — web RAS">
+    <form class="form-light" action="https://formspree.io/f/mnjropvv" method="POST">
+      <!-- Campos ocultos de Formspree -->
+      <input type="hidden" name="_subject" value="Nueva solicitud de afiliación RAS">
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_next" value="https://www.ras-partido-politico.es/?enviado=ok">
+
       <div class="form-row">
         <div class="form-group">
           <label for="u-name">Nombre</label>
-          <input type="text" id="u-name" name="nombre" data-label="Nombre" required placeholder="Tu nombre" />
+          <input type="text" id="u-name" name="nombre" required placeholder="Tu nombre" />
         </div>
         <div class="form-group">
           <label for="u-email">Email</label>
-          <input type="email" id="u-email" name="email" data-label="Email" required placeholder="tu@email.com" />
+          <input type="email" id="u-email" name="email" required placeholder="tu@email.com" />
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label for="u-phone">Teléfono</label>
-          <input type="tel" id="u-phone" name="telefono" data-label="Teléfono" placeholder="+34 ..." />
+          <input type="tel" id="u-phone" name="telefono" placeholder="+34 ..." />
         </div>
         <div class="form-group">
           <label for="u-msg">Mensaje</label>
-          <input type="text" id="u-msg" name="mensaje" data-label="Mensaje" placeholder="¿Cómo quieres colaborar?" />
+          <input type="text" id="u-msg" name="mensaje" placeholder="¿Cómo quieres colaborar?" />
         </div>
       </div>
       <button type="submit" class="form-submit">Quiero unirme</button>
@@ -233,10 +236,10 @@
         Tus datos se tratarán según nuestra <a href="privacidad.html">Política de Privacidad</a>.
         No los compartiremos con terceros.
       </p>
-      <div class="form-success" data-form-success>
-        ✓ Gracias. Se abrirá tu cliente de correo para enviarnos la solicitud.
-      </div>
     </form>
+
+    <!-- Mensaje de confirmación tras el envío (se muestra con ?enviado=ok) -->
+    <div id="form-ok">Mensaje enviado correctamente. Te responderemos en breve.</div>
   </section>
 
   <!-- ============================================================

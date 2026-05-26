@@ -160,13 +160,19 @@ document.querySelectorAll('.email-link').forEach(el => {
 });
 
 // ----------------------------------------------------------
-// Tras envío con Formspree (_next ?enviado=ok), mostrar #form-ok
+// Envío de formularios a Formspree vía fetch (sin redirigir)
+// Muestra el modal #modal-ok al terminar.
 // ----------------------------------------------------------
-(function () {
-  if (!/[?&]enviado=ok\b/.test(location.search)) return;
-  const ok = document.getElementById('form-ok');
-  if (!ok) return;
-  ok.classList.add('show');
-  ok.style.display = 'block';
-  ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
-})();
+document.querySelectorAll('#form-contacto, #form-unete').forEach(form => {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    await fetch('https://formspree.io/f/mnjropvv', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    form.reset();
+    document.getElementById('modal-ok').style.display = 'flex';
+  });
+});

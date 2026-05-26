@@ -83,12 +83,11 @@
         </ul>
       </aside>
 
-      <!-- Columna derecha: formulario (Formspree) -->
-      <form class="form-light" action="https://formspree.io/f/mnjropvv" method="POST">
+      <!-- Columna derecha: formulario (Formspree vía fetch) -->
+      <form id="form-contacto" class="form-light">
         <!-- Campos ocultos de Formspree -->
         <input type="hidden" name="_subject" value="Nuevo mensaje web RAS">
         <input type="text" name="_gotcha" style="display:none">
-        <input type="hidden" name="_next" value="https://ras-web-lilac.vercel.app/contacto.html?enviado=ok">
 
         <div class="form-row">
           <div class="form-group">
@@ -120,9 +119,6 @@
           No los compartiremos con terceros.
         </p>
       </form>
-
-      <!-- Mensaje de confirmación tras el envío (se muestra con ?enviado=ok) -->
-      <div id="form-ok">Mensaje enviado correctamente. Te responderemos en breve.</div>
 
     </div>
   </section>
@@ -176,6 +172,25 @@
     <div class="cookie-actions">
       <button type="button" class="btn btn-solid" id="cookieAccept">Aceptar</button>
       <button type="button" class="btn btn-outline" id="cookieReject">Rechazar</button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MODAL DE CONFIRMACIÓN DE ENVÍO (lo muestra script.js)
+       ============================================================ -->
+  <div id="modal-ok" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:9999;
+    align-items:center; justify-content:center;">
+    <div style="background:var(--color-papel); padding:48px 40px; max-width:420px; width:90%; position:relative;">
+      <button onclick="document.getElementById('modal-ok').style.display='none'" style="position:absolute;
+        top:16px; right:16px; background:none; border:none; font-size:20px; cursor:pointer; color:var(--color-negro)">
+        ✕
+      </button>
+      <p style="font-family:var(--font-display); font-size:24px; margin-bottom:12px; color:var(--color-negro)">
+        ¡Mensaje recibido!
+      </p>
+      <p style="font-family:var(--font-body); font-size:15px; color:var(--color-negro)">
+        Gracias por contactar con RAS. Te responderemos en breve.
+      </p>
     </div>
   </div>
 

@@ -32,6 +32,15 @@ ul, ol { list-style: none; }
 
   --nav-h: 78px;
   --gutter: 32px;
+
+  /* Alias largos (compat. con snippets de spec) */
+  --color-negro: var(--negro);
+  --color-amarillo: var(--amarillo);
+  --color-papel: var(--papel);
+  --color-rojo: var(--rojo);
+  --color-muted: var(--muted);
+  --font-display: var(--bn);
+  --font-body: var(--mono);
 }
 
 /* ------------------------------------------------------------
